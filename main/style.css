@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Noto Sans Thai", serif;
+  font-family: "Roboto", serif;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+}
+.visible {
+  opacity: 1;
+}
+
+@keyframes moveToTop {
+  from {
+    top: 43.3%;
+  }
+  to {
+    top: 15%;
+  }
+}
+
+@media (width <= 96rem) {
+  @keyframes moveToTop {
+    from {
+      top: 41.5%;
+    }
+    to {
+      top: 15%;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 50vh;
+  }
+}
+
+.bg-img {
+  background-image: url("../public/img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.bg-img-short {
+  height: 50vh;
+  animation: slideUp 2s ease-in-out forwards;
+}
+
+.move-to-top {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: moveToTop 2s ease-in-out forwards;
+}
+
+.plant-fade-in {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.img-rice {
+  background-image: url("../public/img/rice.jpg");
+}
+
+.img-plant1 {
+  background-image: url("../public/img/plant1.jpg");
+}
+
+.img-corn {
+  background-image: url("../public/img/corn.jpg");
+}
+
+.img-rice,
+.img-plant1,
+.img-corn {
+  height: 250px;
+  width: 600px;
+}
+
+@media (width<= 48rem) {
+  .img-rice,
+  .img-plant1,
+  .img-corn {
+    height: 150px;
+    width: 250px;
+  }
+}
+
+.logo-png {
+  height: 7%;
+  width: 7%;
+}
+
+.text-shadow-2 {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
