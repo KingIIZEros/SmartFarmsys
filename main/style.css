@@ -13,10 +13,6 @@ body {
   opacity: 1;
 }
 
-.text-tablet {
-  font-size: 8rem;
-}
-
 @keyframes moveToTop {
   from {
     top: 43.3%;
@@ -35,7 +31,8 @@ body {
       top: 15%;
     }
   }
-  .text-tablet {
+  .text-shadow-2 {
+    text-shadow: 2px 2px 4px #000000;
     font-size: 6rem;
   }
 }
@@ -118,6 +115,7 @@ body {
 
 .text-shadow-2 {
   text-shadow: 2px 2px 4px #000000;
+  font-size: 8rem;
 }
 
 .material-symbols-outlined {
