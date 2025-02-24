@@ -15,20 +15,24 @@
   <body>
     <div
       id="bg"
-      class="bg-img bg-amber-100 flex h-screen justify-center items-center w-full"
+      class="bg-img bg-amber-100 flex h-screen justify-start sm:justify-center items-center w-full"
     >
       <div
         id="Head"
-        class="text-white md:mt-4 md:text-6xl xl:text-9xl xl:mt-4 font-bold fade-in text-shadow-2"
+        class="text-white text-4xl mt-12 md:mt-4 md:text-6xl ml-8 sm:ml-0 xl:text-9xl xl:mt-4 font-bold fade-in text-shadow-2"
       >
         Smart farm
       </div>
+      <div class="absolute bottom-0 w-full">
+        <div class="bg-cyan-950/70 h-1.5 w-full"></div>
+      </div>
     </div>
+    <div class="bg-black/10 h-1 w-full"></div>
     <nav
       id="navbar"
       class="bg-blue-300/50 shadow-md p-4 h-16 fixed top-0 w-full flex justify-between items-center hidden"
     >
-      <div class="ml-4">
+      <div class="ml-1 sm:ml-4 w-16 h-16 md: mt-6">
         <img
           src="../public/img/logo.png"
           alt="Smart Farm Logo"
@@ -49,10 +53,10 @@
       </ul>
     </nav>
     <div id="description" class="container mx-auto text-left m-4">
-      <h2 class="text-2xl md:text-4xl text-green-950 font-bold my-8">
-        🌳 ยินดีต้อนรับสู่ Smart Farm 🌳
+      <h2 class="text-xl md:text-4xl text-green-950 font-bold my-8">
+        ยินดีต้อนรับเข้าสู่ Smart Farm Monitoring! 🌱💡
       </h2>
-      <div class="bg-green-300/70 rounded-2xl shadow-md">
+      <div class="bg-green-300/70 rounded-2xl shadow-md p-4">
         <p class="text-lg md:text-xl p-4">
           ในโลกที่<strong> เทคโนโลยีมีบทบาทสำคัญในทุกอุตสาหกรรม </strong>
           การเกษตรก็ไม่ใช่ข้อยกเว้น<strong> Smart Farm Monitoring </strong>
@@ -60,6 +64,67 @@
           และที่ปรึกษาด้านการเกษตรสามารถติดตามและจัดการฟาร์มของตนได้อย่างมีประสิทธิภาพ
           ผ่านระบบที่ขับเคลื่อนด้วยข้อมูล
         </p>
+      </div>
+    </div>
+
+    <div class="container mx-auto mt-12">
+      <p class="text-xl md:text-4xl text-cyan-800 font-bold mb-4">
+        🚀 ฟีเจอร์เด่นของเรา
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="card sm:col-span-2">
+          <p class="card-title">Comprehensive Sensor Data Dashboard</p>
+          <p class="small-desc">
+            ตรวจสอบ อุณหภูมิ, ความชื้น, และความชื้นในดิน
+            แบบเรียลไทม์ผ่านอินเทอร์เฟซที่ใช้งานง่าย
+            พร้อมกราฟและแผนภูมิที่ช่วยให้การตัดสินใจทำได้รวดเร็วขึ้น
+          </p>
+          <div class="go-corner">
+            <div class="go-arrow">→</div>
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">Geospatial Farm Mapping</p>
+          <p class="small-desc">
+            ดูตำแหน่งและพื้นที่เพาะปลูกของคุณบนแผนที่แบบโต้ตอบ
+            เพื่อให้คุณสามารถวางแผนและติดตามสภาพแวดล้อมของฟาร์มได้อย่างแม่นยำ
+          </p>
+          <div class="go-corner">
+            <div class="go-arrow">→</div>
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">Plantation Area Management</p>
+          <p class="small-desc">
+            สร้างและแก้ไขข้อมูลแปลงเพาะปลูกของคุณได้อย่างง่ายดาย
+            ไม่ว่าจะเป็นขนาดพื้นที่, ชนิดพืชที่ปลูก,
+            หรือสถานะการเพาะปลูกในแต่ละฤดูกาล
+          </p>
+          <div class="go-corner">
+            <div class="go-arrow">→</div>
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">Historical Data Trends and Comparisons</p>
+          <p class="small-desc">
+            ใช้ข้อมูลในอดีตเพื่อช่วยวางแผนการเพาะปลูกให้มีประสิทธิภาพยิ่งขึ้น
+            วิเคราะห์แนวโน้มของสภาพอากาศ, ปริมาณน้ำ, และสุขภาพของพืช
+            เพื่อให้คุณสามารถวางแผนการทำฟาร์มได้อย่างชาญฉลาด
+          </p>
+          <div class="go-corner">
+            <div class="go-arrow">→</div>
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">Irrigation and Fertilization Information</p>
+          <p class="small-desc">
+            จัดการและติดตามข้อมูลเกี่ยวกับการให้น้ำและการใช้ปุ๋ยภายในฟาร์ม
+            เพื่อเพิ่มผลผลิตและลดของเสีย
+          </p>
+          <div class="go-corner">
+            <div class="go-arrow">→</div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
