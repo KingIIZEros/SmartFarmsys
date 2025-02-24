@@ -9,6 +9,8 @@
     --color-red-500: oklch(0.637 0.237 25.331);
     --color-amber-50: oklch(0.987 0.022 95.277);
     --color-amber-100: oklch(0.962 0.059 95.617);
+    --color-green-300: oklch(0.871 0.15 154.449);
+    --color-green-950: oklch(0.266 0.065 152.934);
     --color-cyan-300: oklch(0.865 0.127 207.078);
     --color-cyan-800: oklch(0.45 0.085 224.283);
     --color-blue-300: oklch(0.809 0.105 251.813);
@@ -26,6 +28,10 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --text-7xl: 4.5rem;
@@ -36,6 +42,7 @@
     --text-9xl--line-height: 1;
     --font-weight-bold: 700;
     --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -389,8 +396,20 @@
   .m-4 {
     margin: calc(var(--spacing) * 4);
   }
+  .mx-8 {
+    margin-inline: calc(var(--spacing) * 8);
+  }
   .mx-auto {
     margin-inline: auto;
+  }
+  .my-8 {
+    margin-block: calc(var(--spacing) * 8);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
   }
   .mr-1 {
     margin-right: calc(var(--spacing) * 1);
@@ -523,6 +542,9 @@
   }
   .h-56320 {
     height: calc(var(--spacing) * 56320);
+  }
+  .h-full {
+    height: 100%;
   }
   .h-screen {
     height: 100vh;
@@ -1259,6 +1281,9 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
@@ -1415,8 +1440,29 @@
   .bg-cyan-300\/10 {
     background-color: color-mix(in oklab, var(--color-cyan-300) 10%, transparent);
   }
+  .bg-cyan-300\/50 {
+    background-color: color-mix(in oklab, var(--color-cyan-300) 50%, transparent);
+  }
   .bg-cyan-800 {
     background-color: var(--color-cyan-800);
+  }
+  .bg-green-300 {
+    background-color: var(--color-green-300);
+  }
+  .bg-green-300\/50 {
+    background-color: color-mix(in oklab, var(--color-green-300) 50%, transparent);
+  }
+  .bg-green-300\/70 {
+    background-color: color-mix(in oklab, var(--color-green-300) 70%, transparent);
+  }
+  .bg-green-300\/\[70\%\] {
+    background-color: color-mix(in oklab, var(--color-green-300) 70%, transparent);
+  }
+  .bg-green-300\/\[73\.3\%\] {
+    background-color: color-mix(in oklab, var(--color-green-300) 73.3%, transparent);
+  }
+  .bg-green-300\/\[73\.3\] {
+    background-color: color-mix(in oklab, var(--color-green-300) 7330%, transparent);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -1672,6 +1718,10 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
   .text-6xl {
     font-size: var(--text-6xl);
     line-height: var(--tw-leading, var(--text-6xl--line-height));
@@ -1695,6 +1745,10 @@
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .leading-none {
     --tw-leading: 1;
@@ -1782,6 +1836,9 @@
   }
   .text-gray-100 {
     color: var(--color-gray-100);
+  }
+  .text-green-950 {
+    color: var(--color-green-950);
   }
   .text-white {
     color: var(--color-white);
@@ -2402,6 +2459,18 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .md\:text-2xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .md\:text-4xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
+    }
+  }
   .md\:text-6xl {
     @media (width >= 48rem) {
       font-size: var(--text-6xl);
@@ -2412,6 +2481,12 @@
     @media (width >= 48rem) {
       font-size: var(--text-9xl);
       line-height: var(--tw-leading, var(--text-9xl--line-height));
+    }
+  }
+  .md\:text-xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
   .lg\:mt-4 {

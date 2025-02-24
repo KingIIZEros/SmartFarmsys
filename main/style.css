@@ -113,11 +113,3 @@ body {
 .text-shadow-2 {
   text-shadow: 2px 2px 4px #000000;
 }
-
-.material-symbols-outlined {
-  font-variation-settings:
-    "FILL" 0,
-    "wght" 400,
-    "GRAD" 0,
-    "opsz" 24;
-}
