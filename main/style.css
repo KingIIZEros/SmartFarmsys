@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
 
 body {
   font-family: "Noto Sans Thai", serif;
-  font-family: "Roboto", serif;
 }
 
 .fade-in {
@@ -22,10 +21,10 @@ body {
   }
 }
 
-@media (width <= 75rem) {
+@media (width <= 80rem) {
   .text-shadow-2 {
     text-shadow: 2px 2px 4px #000000;
-    font-size: 6rem;
+    font-size: 4.5rem;
   }
 }
 
