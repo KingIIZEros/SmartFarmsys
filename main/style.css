@@ -14,24 +14,19 @@ body {
 
 @keyframes moveToTop {
   from {
-    top: 43.3%;
+    top: 42.6%;
   }
   to {
     top: 15%;
   }
 }
 
-@media (width <= 80rem) {
-  .text-shadow-2 {
-    text-shadow: 2px 2px 4px #000000;
-    font-size: 4.5rem;
-  }
-}
+
 
 @media (width <= 96rem) {
   @keyframes moveToTop {
     from {
-      top: 41.5%;
+      top: 40.5%;
     }
     to {
       top: 15%;
@@ -117,7 +112,6 @@ body {
 
 .text-shadow-2 {
   text-shadow: 2px 2px 4px #000000;
-  font-size: 8rem;
 }
 
 .material-symbols-outlined {
