@@ -13,6 +13,10 @@ body {
   opacity: 1;
 }
 
+.text-tablet {
+  font-size: 8rem;
+}
+
 @keyframes moveToTop {
   from {
     top: 43.3%;
@@ -30,6 +34,9 @@ body {
     to {
       top: 15%;
     }
+  }
+  .text-tablet {
+    font-size: 4.5rem;
   }
 }
 
