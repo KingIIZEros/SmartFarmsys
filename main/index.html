@@ -14,7 +14,7 @@
   </head>
   <body>
     <div
-      id="bg"
+      id="home"
       class="bg-img bg-amber-100 flex h-screen justify-start sm:justify-center items-center w-full"
     >
       <div
@@ -32,26 +32,42 @@
       id="navbar"
       class="bg-blue-300/50 shadow-md p-4 h-16 fixed top-0 w-full flex justify-between items-center hidden"
     >
-      <div class="ml-1 sm:ml-4 w-16 h-16 md: mt-6">
+      <a
+        href="./index.html#home"
+        class="flex ml-1 sm:ml-4 w-16 h-16 md: mt-6 flex-auto"
+      >
         <img
           src="../public/img/logo.png"
           alt="Smart Farm Logo"
           class="logo-png"
         />
-      </div>
-      <ul class="flex justify-end">
+        <div class="ml-4 text-2xl font-bold text-[#03172b] mt-1.5">
+          Smart Farm
+        </div>
+      </a>
+      <ul class="flex align-middle flex-auto">
         <li>
-          <a href="#home" class="text-black mr-6"
+          <a href="index.html#home" class="text-black mr-6"
             ><span class="material-symbols-outlined align-middle mr-1">
               home </span
             >Home</a
           >
         </li>
         <li><a href="#about" class="text-black mr-4">About</a></li>
-        <li><a href="#services" class="text-black mr-4">Services</a></li>
+        <li>
+          <a href="index.html#services" class="text-black mr-4">Services</a>
+        </li>
         <li><a href="#contact" class="text-black mr-4">Contact</a></li>
       </ul>
+
+      <input id="checkbox2" type="checkbox" title="Toggle navigation" />
+      <label class="toggle toggle2" for="checkbox2">
+        <div id="bar4" class="bars"></div>
+        <div id="bar5" class="bars"></div>
+        <div id="bar6" class="bars"></div>
+      </label>
     </nav>
+    <div id="menu"></div>
     <div id="description" class="container mx-auto text-left m-4">
       <h2 class="text-xl md:text-4xl text-green-950 font-bold my-8">
         ยินดีต้อนรับเข้าสู่ Smart Farm Monitoring! 🌱💡
@@ -67,12 +83,12 @@
       </div>
     </div>
 
-    <div class="container mx-auto mt-12">
+    <div id="services" class="container mx-auto mt-12">
       <p class="text-xl md:text-4xl text-cyan-800 font-bold mb-4">
         🚀 ฟีเจอร์เด่นของเรา
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="card sm:col-span-2">
+        <a href="" class="card sm:col-span-2">
           <p class="card-title">Comprehensive Sensor Data Dashboard</p>
           <p class="small-desc">
             ตรวจสอบ อุณหภูมิ, ความชื้น, และความชื้นในดิน
@@ -82,8 +98,8 @@
           <div class="go-corner">
             <div class="go-arrow">→</div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="" class="card">
           <p class="card-title">Geospatial Farm Mapping</p>
           <p class="small-desc">
             ดูตำแหน่งและพื้นที่เพาะปลูกของคุณบนแผนที่แบบโต้ตอบ
@@ -92,8 +108,8 @@
           <div class="go-corner">
             <div class="go-arrow">→</div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="./plantation.html" class="card">
           <p class="card-title">Plantation Area Management</p>
           <p class="small-desc">
             สร้างและแก้ไขข้อมูลแปลงเพาะปลูกของคุณได้อย่างง่ายดาย
@@ -103,8 +119,8 @@
           <div class="go-corner">
             <div class="go-arrow">→</div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="" class="card">
           <p class="card-title">Historical Data Trends and Comparisons</p>
           <p class="small-desc">
             ใช้ข้อมูลในอดีตเพื่อช่วยวางแผนการเพาะปลูกให้มีประสิทธิภาพยิ่งขึ้น
@@ -114,8 +130,8 @@
           <div class="go-corner">
             <div class="go-arrow">→</div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="" class="card">
           <p class="card-title">Irrigation and Fertilization Information</p>
           <p class="small-desc">
             จัดการและติดตามข้อมูลเกี่ยวกับการให้น้ำและการใช้ปุ๋ยภายในฟาร์ม
@@ -124,8 +140,11 @@
           <div class="go-corner">
             <div class="go-arrow">→</div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
+    <footer>
+      <p class="text-center">&copy; 2025 Smart Farm System</p>
+    </footer>
   </body>
 </html>

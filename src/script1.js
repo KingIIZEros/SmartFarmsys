@@ -1,21 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const headElement = document.getElementById("Head");
-  const navbarElement = document.getElementById("navbar");
-  const bgElement = document.getElementById("home");
-  setTimeout(() => {
-    headElement.classList.add("visible");
-    setTimeout(() => {
-      headElement.classList.add("move-to-top");
-      setTimeout(() => {
-        navbarElement.classList.remove("hidden");
-        bgElement.classList.remove("h-screen");
-        bgElement.classList.add("bg-img-short");
-      }, 2000); // Delay to ensure the move-to-top animation completes
-    }, 1500); // Delay to ensure the fade-in effect completes
-  }, 100); // Delay to ensure the transition effect
-});
-
-document.addEventListener("DOMContentLoaded", function () {
   const menu = document.getElementById("menu");
   const menuButton = document.getElementById("checkbox2");
   createExamplePlant();
