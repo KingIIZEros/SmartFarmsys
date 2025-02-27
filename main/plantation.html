@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
+    <link href="./responsive.css" rel="stylesheet" />
     <link href="./tailwindcss.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -12,39 +13,65 @@
     <script src="../src/script1.js"></script>
     <title>Plantation Area Management</title>
   </head>
-  <body>
-    <nav
-      id="navbar"
-      class="bg-blue-300/50 shadow-md p-4 h-16 fixed top-0 w-full flex justify-between items-center"
-    >
-      <a
-        href="./index.html#home"
-        class="flex ml-1 sm:ml-4 w-16 h-16 md: mt-6 flex-auto"
-      >
+  <body class="bg-gradient-to-l from-[#c8ffdd] to-[#e2ffed]">
+    <div id="loading" class="container h-screen">
+      <div class="flex justify-center items-center h-screen w-screen">
         <img
           src="../public/img/logo.png"
           alt="Smart Farm Logo"
-          class="logo-png"
+          class="animate-bounce w-14 h-16 sm:w-[5.5rem] sm:h-[6rem]"
         />
-        <div class="ml-4 text-2xl font-bold text-[#03172b] mt-1.5">
-          Smart Farm
-        </div>
-      </a>
-      <ul class="flex align-middle flex-auto">
-        <li>
-          <a href="index.html#home" class="text-black mr-6"
+      </div>
+    </div>
+    <nav
+      id="navbar"
+      class="bg-blue-300/50 shadow-md p-4 h-16 fixed top-0 w-full flex justify-between items-center hidden"
+    >
+      <div>
+        <a
+          href="./index.html#home"
+          class="flex ml-1 sm:ml-4 h-16 mt-[2.7rem] w-[14rem]"
+        >
+          <img
+            src="../public/img/logo.png"
+            alt="Smart Farm Logo"
+            class="hover:scale-110 transition-transform duration-300 ease-in-out"
+          />
+          <div
+            class="ml-4 text-sm sm:text-2xl font-bold sm:mt-[-0.3rem] text-[#03172b] hover:scale-105 transition-transform duration-300 ease-in-out"
+          >
+            Smart Farm
+          </div>
+        </a>
+      </div>
+      <ul
+        class="flex align-middle justify-center hidden-sm text-xl font-bold text-[#03172be8]"
+      >
+        <li
+          class="hover:scale-110 transition-transform duration-300 ease-in-out"
+        >
+          <a href="index.html#home" class="mr-6"
             ><span class="material-symbols-outlined align-middle mr-1">
               home </span
             >Home</a
           >
         </li>
-        <li><a href="#about" class="text-black mr-4">About</a></li>
-        <li>
-          <a href="index.html#services" class="text-black mr-4">Services</a>
+        <li
+          class="hover:scale-110 transition-transform duration-300 ease-in-out"
+        >
+          <a href="index.html#about" class="mr-4">About</a>
         </li>
-        <li><a href="#contact" class="text-black mr-4">Contact</a></li>
+        <li
+          class="hover:scale-110 transition-transform duration-300 ease-in-out"
+        >
+          <a href="index.html#services" class="mr-4">Services</a>
+        </li>
+        <li
+          class="hover:scale-110 transition-transform duration-300 ease-in-out"
+        >
+          <a href="#contact" class="mr-4">Contact</a>
+        </li>
       </ul>
-
       <input id="checkbox2" type="checkbox" title="Toggle navigation" />
       <label class="toggle toggle2" for="checkbox2">
         <div id="bar4" class="bars"></div>
@@ -54,16 +81,243 @@
     </nav>
     <div id="menu"></div>
 
-    <div class="bg-gradient-to-t from-[#30bb68] to-[#7edda2] h-screen">
+    <div id="management" class="hidden h-full">
       <div class="flex justify-center">
         <p
-          class="text-[#ffffff] text-center text-2xl md:text-4xl xl:text-6xl font-bold text-shadow-2 mt-20"
+          class="text-[#005b6bcc] text-center text-lg sm:text-3xl xl:text-6xl font-bold mt-24"
         >
           Plantation Area Management 🗺️
         </p>
-
-
+      </div>
+      <div class="container mx-auto mt-8">
+        <div
+          class="overflow-y-auto h-[35rem] bg-gradient-to-b mx-4 from-[#c3ece7] to-[#a7d3d9] p-4 rounded-lg custom-scroll"
+        >
+          <code>
+            <div id="AreaGrid" class="grid grid-row p-4 gap-4">
+              <!-- Cards will be inserted here -->
+            </div>
+          </code>
+        </div>
+      </div>
+      <div class="flex justify-center mt-20 gap-4 mb-8">
+        <input
+          type="text"
+          id="searchInput"
+          class="p-2 button w-1/4"
+          placeholder="&#x1F50D; Search plantation areas by Id"
+        />
+        <button id="addData" class="cursor-pointer tooltip-container">
+          <span class="material-symbols-outlined mt-[0.5rem]"> add </span>
+          <span class="tooltip-text">Add area: เพิ่มข้อมูลพื้นที่</span>
+        </button>
+        <button id="deleteData" class="cursor-pointer tooltip-container">
+          <span class="material-symbols-outlined mt-[0.5rem]"> remove </span>
+          <span class="tooltip-text">Delete area: ลบข้อมูลพื้นที่</span>
+        </button>
       </div>
     </div>
+
+    <!-- จอกรอกข้อมูล -->
+    <div id="addModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="text-xl">Add new area data 📅</h2>
+          <button class="close-btn" id="closeModalBtn">❌</button>
+        </div>
+
+        <!-- ฟอร์มกรอกข้อมูล -->
+        <form id="addForm">
+          <label>Rainfall (mm)</label>
+          <input
+            required
+            type="number"
+            name="Rainfall"
+            step="0.01"
+            title="Rainfall in millimeters"
+            placeholder="Rainfall in millimeters"
+            class="inputmodal"
+          />
+
+          <label>Urban Area Proximity (km)</label>
+          <input
+            required
+            type="number"
+            name="Urban_area_proximity"
+            step="0.1"
+            title="Urban Area Proximity in kilometers"
+            placeholder="Urban Area Proximity in kilometers"
+            class="inputmodal"
+          />
+
+          <label>Size (m²)</label>
+          <input
+            required
+            type="number"
+            name="size"
+            title="Size in square meters"
+            placeholder="Size in square meters"
+            class="inputmodal"
+          />
+
+          <label>Pest Pressure (%)</label>
+          <input
+            required
+            type="number"
+            name="Pest_pressure"
+            step="0.1"
+            title="Pest Pressure in percentage"
+            placeholder="Pest Pressure in percentage"
+            class="inputmodal"
+          />
+
+          <label>Crop Density (plants/m²)</label>
+          <input
+            required
+            type="number"
+            name="Crop_density"
+            step="0.1"
+            title="Crop Density in plants per square meter"
+            placeholder="Crop Density in plants per square meter"
+            class="inputmodal"
+          />
+
+          <label>Plantation area</label>
+          <select
+            name="id_area"
+            class="inputmodal"
+            title="Crop Density in plants per square meter"
+          >
+            <option value="" disabled selected>Select an area</option>
+            <option value="1">North</option>
+            <option value="2">South</option>
+            <option value="3">Center</option>
+          </select>
+          <br />
+          <button id="submit" type="submit" class="save-btn">
+            บันทึกข้อมูล
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- จอลบข้อมูล -->
+    <div id="deleteModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="text-xl">Delete Area by Id 🗑️</h2>
+          <button class="close-btn" id="closeModaldelete">❌</button>
+        </div>
+
+        <!-- กรอกข้อมูล -->
+        <form id="deleteForm">
+          <input
+            type="number"
+            name="id_Dashbord"
+            title="Delete Area"
+            placeholder="Id area"
+            class="inputmodal"
+          />
+          <button id="submitdelete" type="submit" class="save-btn">
+            ลบข้อมูล
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="updateModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="text-xl">Update area data 📅</h2>
+          <button class="close-btn" id="closeModalUpdate">❌</button>
+        </div>
+
+        <!-- ฟอร์มกรอกข้อมูล -->
+        <form id="updateForm">
+            <label>ID</label>
+            <input
+            type="number"
+            id="updateId"
+            name="id_Dashbord"
+            title="Id"
+            placeholder="Enter Id"
+            class="inputmodal"
+            required
+            readonly
+            />
+
+          <label>Rainfall</label>
+          <input
+            type="number"
+            id="updateRainfall"
+            name="Rainfall"
+            title="Rainfall in millimeters"
+            placeholder="Enter Rainfall in mm"
+            class="inputmodal"
+            required
+          />
+
+          <label>Urban Area Proximity</label>
+          <input
+            type="text"
+            id="updateUrban"
+            name="Urban_area_proximity"
+            title="Urban Area Proximity in kilometers"
+            placeholder="Enter Urban Area Proximity in km"
+            class="inputmodal"
+            required
+          />
+
+          <label>Size</label>
+          <input
+            type="number"
+            id="updateSize"
+            name="size"
+            title="Size in square meters"
+            placeholder="Enter Size in m²"
+            class="inputmodal"
+            required
+          />
+
+          <label>Pest Pressure</label>
+          <input
+            type="number"
+            id="updatePest"
+            name="Pest_pressure"
+            title="Pest Pressure in percentage"
+            placeholder="Enter Pest Pressure in %"
+            class="inputmodal"
+            required
+          />
+
+          <label>Crop Density</label>
+          <input
+            type="number"
+            id="updateCrop"
+            name="Crop_density"
+            title="Crop Density in plants per square meter"
+            placeholder="Enter Crop Density in plants/m²"
+            class="inputmodal"
+            required
+          />
+          <label>Plantation area</label>
+          <select
+            name="id_area"
+            class="inputmodal"
+            title="Crop Density in plants per square meter"
+          >
+            <option value="" disabled selected>Select an area</option>
+            <option value="1">North</option>
+            <option value="2">South</option>
+            <option value="3">Center</option>
+          </select>
+          <button id="submitupdate" type="submit" class="save-btn">
+            อัปเดตข้อมูล
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="../src/serchUpdate.js"></script>
+    <script src="../src/addDelete.js"></script>
   </body>
 </html>

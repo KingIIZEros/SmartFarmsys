@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
+    <link href="./responsive.css" rel="stylesheet" />
     <link href="./tailwindcss.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -32,34 +33,53 @@
       id="navbar"
       class="bg-blue-300/50 shadow-md p-4 h-16 fixed top-0 w-full flex justify-between items-center hidden"
     >
-      <a
-        href="./index.html#home"
-        class="flex ml-1 sm:ml-4 w-16 h-16 md: mt-6 flex-auto"
+      <div>
+        <a
+          href="./index.html#home"
+          class="flex ml-1 sm:ml-4 h-16 mt-[2.7rem] w-[14rem]"
+        >
+          <img
+            src="../public/img/logo.png"
+            alt="Smart Farm Logo"
+            class="hover:scale-110 transition-transform duration-300 ease-in-out"
+          />
+          <div
+            class="ml-4 text-sm sm:text-2xl font-bold sm:mt-[-0.3rem] text-[#03172b] hover:scale-105 transition-transform duration-300 ease-in-out"
+          >
+            Smart Farm
+          </div>
+        </a>
+      </div>
+      <ul
+        class="flex align-middle justify-center hidden-sm text-xl font-bold text-[#03172be8]"
       >
-        <img
-          src="../public/img/logo.png"
-          alt="Smart Farm Logo"
-          class="logo-png"
-        />
-        <div class="ml-4 text-2xl font-bold text-[#03172b] mt-1.5">
-          Smart Farm
-        </div>
-      </a>
-      <ul class="flex align-middle flex-auto">
-        <li>
-          <a href="index.html#home" class="text-black mr-6"
-            ><span class="material-symbols-outlined align-middle mr-1">
+        <li
+          class="hover:scale-110 transition-transform duration-300 ease-in-out"
+        >
+          <a href="index.html#home" class="mr-6"
+            ><span class="material-symbols-outlined align-middle mt-[-5px] mr-1">
               home </span
             >Home</a
           >
         </li>
-        <li><a href="#about" class="text-black mr-4">About</a></li>
-        <li>
-          <a href="index.html#services" class="text-black mr-4">Services</a>
+        <li
+          class="hover:scale-110 transition-transform duration-300 ease-in-out"
+        >
+          <a href="#about" class="mr-6"
+            ><span class="material-symbols-outlined align-middle mt-[-5px] mr-1"> transcribe </span>About</a
+          >
         </li>
-        <li><a href="#contact" class="text-black mr-4">Contact</a></li>
+        <li
+          class="hover:scale-110 transition-transform duration-300 ease-in-out"
+        >
+          <a href="index.html#services" class="mr-4">Services</a>
+        </li>
+        <li
+          class="hover:scale-110 transition-transform duration-300 ease-in-out"
+        >
+          <a href="#contact" class="mr-4">Contact</a>
+        </li>
       </ul>
-
       <input id="checkbox2" type="checkbox" title="Toggle navigation" />
       <label class="toggle toggle2" for="checkbox2">
         <div id="bar4" class="bars"></div>
@@ -69,22 +89,62 @@
     </nav>
     <div id="menu"></div>
     <div id="description" class="container mx-auto text-left m-4">
-      <h2 class="text-xl md:text-4xl text-green-950 font-bold my-8">
-        ยินดีต้อนรับเข้าสู่ Smart Farm Monitoring! 🌱💡
+      <h2 class="text-xl mx-4 md:text-4xl text-green-950 font-bold my-8">
+        ยินดีต้อนรับเข้าสู่
+        <h2
+          class="text-xl ml-[10px] sm:ml-14 md:text-4xl text-green-950 font-bold mb-8 mt-[-2rem]"
+        >
+          Smart Farm Monitoring! 🌱💡
+        </h2>
       </h2>
-      <div class="bg-green-300/70 rounded-2xl shadow-md p-4">
-        <p class="text-lg md:text-xl p-4">
-          ในโลกที่<strong> เทคโนโลยีมีบทบาทสำคัญในทุกอุตสาหกรรม </strong>
-          การเกษตรก็ไม่ใช่ข้อยกเว้น<strong> Smart Farm Monitoring </strong>
-          เป็นแพลตฟอร์มที่ช่วยให้เกษตรกร เจ้าของฟาร์ม
-          และที่ปรึกษาด้านการเกษตรสามารถติดตามและจัดการฟาร์มของตนได้อย่างมีประสิทธิภาพ
-          ผ่านระบบที่ขับเคลื่อนด้วยข้อมูล
-        </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-4">
+        <div
+          id="about"
+          class="bg-green-300/70 rounded-2xl shadow-md lg:mb-20 hover:shadow-xl transition-all duration-300"
+        >
+          <p class="text-lg md:text-xl p-6">
+            ในโลกที่<strong> เทคโนโลยีมีบทบาทสำคัญในทุกอุตสาหกรรม </strong>
+            การเกษตรก็ไม่ใช่ข้อยกเว้น <strong>Smart Farm Monitoring</strong>
+            เป็นแพลตฟอร์มที่ช่วยให้เกษตรกร เจ้าของฟาร์ม
+            และที่ปรึกษาด้านการเกษตรสามารถติดตามและจัดการฟาร์มของตนได้อย่างมีประสิทธิภาพ
+            ผ่านระบบที่ขับเคลื่อนด้วยข้อมูล
+          </p>
+        </div>
+
+        <div
+          class="bg-emerald-400/40 rounded-2xl shadow-md lg:mt-20 hover:shadow-lg transition-all duration-300"
+        >
+          <p class="text-lg md:text-xl p-6">
+            ด้วยการใช้เทคโนโลยีที่ทันสมัย และข้อมูลที่เป็นประโยชน์
+            <strong>Smart Farm Monitoring</strong> ช่วยให้คุณสามารถติดตาม
+            สภาพแวดล้อมของฟาร์มได้อย่างง่ายดาย
+            และทำให้การตัดสินใจเกี่ยวกับการจัดการฟาร์มของคุณเป็นเรื่องง่ายขึ้น
+          </p>
+        </div>
+
+        <div
+          class="sm:col-span-2 bg-emerald-500/30 rounded-2xl lg:mt-4 lg:mx-20 shadow-md hover:shadow-lg transition-all duration-300"
+        >
+          <p class="text-lg md:text-xl p-6">
+            การผสมผสานของ
+            <strong>AI, IoT และการวิเคราะห์ข้อมูล</strong>
+            ทำให้ระบบสามารถพยากรณ์ และแจ้งเตือนเกี่ยวกับสภาพอากาศ โรคพืช
+            และความต้องการของพืช ได้อย่างแม่นยำ ซึ่งช่วยลดต้นทุน เพิ่มผลผลิต
+            และทำให้การทำฟาร์มเป็นเรื่องง่ายและแม่นยำมากขึ้น ในโลกของ
+            <strong>เกษตรอัจฉริยะ (Smart Farming)</strong>
+            ข้อมูลเป็นหัวใจสำคัญในการช่วยให้เกษตรกรสามารถตัดสินใจได้อย่างแม่นยำ
+            ทางเราจึงได้พัฒนาระบบ<strong>Smart Farm Monitoring</strong>
+            ที่สามารถเก็บรวบรวมข้อมูลสำคัญจากฟาร์มของคุณแบบเรียลไทม์
+            และนำมาวิเคราะห์เพื่อเพิ่มผลผลิต ลดต้นทุน
+            และป้องกันความเสียหายจากสภาพอากาศที่เปลี่ยนแปลงได้
+          </p>
+        </div>
       </div>
     </div>
 
     <div id="services" class="container mx-auto mt-12">
-      <p class="text-xl md:text-4xl text-cyan-800 font-bold mb-4">
+      <p class="text-xl mx-4 md:text-4xl text-cyan-800 font-bold mb-4">
         🚀 ฟีเจอร์เด่นของเรา
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

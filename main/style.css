@@ -12,23 +12,17 @@ body {
   opacity: 1;
 }
 
+.logo-png {
+  width: 5%;
+  height: 10%;
+}
+
 @keyframes moveToTop {
   from {
     top: 42.6%;
   }
   to {
     top: 15%;
-  }
-}
-
-@media (width <= 96rem) {
-  @keyframes moveToTop {
-    from {
-      top: 40.5%;
-    }
-    to {
-      top: 15%;
-    }
   }
 }
 
@@ -65,15 +59,6 @@ body {
   }
   to {
     clip-path: circle(0% at 100% 0%);
-  }
-}
-
-@media (width > 48rem) {
-  .move-to-top {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: moveToTop 2s ease-in-out forwards;
   }
 }
 
@@ -119,17 +104,12 @@ body {
   width: 600px;
 }
 
-@media (width<= 48rem) {
-  .img-rice,
-  .img-plant1,
-  .img-corn {
-    height: 150px;
-    width: 250px;
-  }
-}
-
 .text-shadow-2 {
   text-shadow: 2px 2px 4px #000000;
+}
+
+.text-shadow-3 {
+  text-shadow: 2px 2px 4px #005661;
 }
 
 /* For Card */
@@ -337,4 +317,202 @@ body {
 .value:active::before {
   opacity: 1;
 }
-/* For Menu */
+
+/* For scrollbar */
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #01545a; /* สีพื้นหลังของแทร็ก */
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #9cf8ff; /* สีของ scrollbar */
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #52c8ff; /* สีเมื่อ hover */
+}
+
+/* For Input */
+input#searchInput {
+  background: linear-gradient(to right, rgb(136, 222, 243), rgb(84, 172, 255));
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 14px;
+  border: 2px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+}
+
+input#searchInput:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+input#searchInput:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+/* For Button add */
+button#addData {
+  background: linear-gradient(to right, rgb(136, 243, 168), rgb(84, 255, 204));
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+}
+
+button#addData:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button#addData:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+/* For Button delete */
+button#deleteData {
+  background: linear-gradient(to right, rgb(243, 152, 136), rgb(255, 152, 84));
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+}
+
+button#deleteData:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button#deleteData:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+/* For tooltip*/
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-container .tooltip-text {
+  visibility: hidden;
+  width: 180px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 6px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* For Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 20px;
+  color: red;
+  border: none;
+  background: none;
+}
+
+.inputmodal {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.save-btn {
+  background: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: darkgreen;
+}
+
+.save-btn#submitdelete {
+  background: rgb(128, 0, 0);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn#submitdelete:hover {
+  background: rgb(100, 0, 0);
+}
+
+.save-btn#submitupdate {
+  background: rgb(0, 102, 128);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn#submitupdate:hover {
+  background: rgb(0, 85, 100);
+}
